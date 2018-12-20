@@ -19,3 +19,5 @@ env_logger = "*"
 mongodb = "0.3.12"
 failure = "0.1.1"
 dotenv = "0.13.0"
+
+rand = "0.6.1"
