@@ -1,6 +1,8 @@
 [workspace]
 members = [
   "./",
-  "guessing_game",
-  "ctrl_flow",
+  "1_guessing_game",
+  "2_ctrl_flow",
+  "3_ownership",
+  "4_structs",
 ]
