@@ -6,7 +6,7 @@ use rand::Rng;
 fn main() {
     println!("Guess the number (input your guess, enter 'e' to exit) !");
     let mut guess = String::new();
-    let magic_number = rand::thread_rng().gen_range(0, 101);
+    let magic_number = rand::thread_rng().gen_range(0..=101);
     doguess(&mut guess, &magic_number);
     exit(0);
 }

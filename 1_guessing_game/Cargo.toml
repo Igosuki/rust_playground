@@ -5,19 +5,19 @@ authors = ["Guillaume Balaine <igosuki@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-actix-web = "0.7"
-actix = "0.7"
-serde = "1.0"
-serde_json = "1.0"
-serde_derive = "1.0"
+actix-web = "4.0.1"
+actix = "0.13.0"
+serde = "1.0.137"
+serde_json = "1.0.81"
+serde_derive = "1.0.137"
 json = "*"
 
-bytes = "0.4"
-futures = "0.1"
+bytes = "1.1.0"
+futures = "0.3.21"
 env_logger = "*"
 
-mongodb = "0.3.12"
-failure = "0.1.1"
-dotenv = "0.13.0"
+mongodb = "2.2.2"
+failure = "0.1.8"
+dotenv = "0.15.0"
 
-rand = "0.6.1"
+rand = "0.8.5"
