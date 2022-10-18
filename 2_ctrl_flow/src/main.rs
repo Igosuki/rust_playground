@@ -1,6 +1,5 @@
 use std::io::stdin;
 use std::io::{self, Write};
-use titlecase::{self};
 
 fn main() {
     let mut input = String::new();

@@ -14,18 +14,26 @@ fn main() {
         email: String::from("me@gmail.com"),
         username: String::from("Me"),
         active: false,
-        sign_in_count: 0,
+        sign_in_count: 1,
     };
+    assert!(!user2.is_active());
+    user2.set_inactive();
+    assert!(user2.is_active());
+    assert!(user2.sign_in_count > 0);
     user2.email = String::from("me2@gmail.com");
-
     let user3 = build_user(String::from("kek@kek.com"), String::from("Kek"));
 
-    let user4 = User {
-        email: String::from("kek2@kek2.com"),
-        ..user3
-    };
+    let user4 = User::default("keks2".to_string(), "kek2@kek2.com".to_string());
 
-    println!("{:#?}", user4) // pretty print thanks to the Debug trait
+    assert!(!user4.same_name(&user3));
+
+    println!("{:#?}", user4); // pretty print thanks to the Debug trait
+
+    let color = assign_tuple(0, 1, 2);
+    println!("{:#?}", color); // pretty print thanks to the Debug trait
+
+    let point = Point(0, 1, 2);
+    println!("{:#?}", point); // pretty print thanks to the Debug trait
 }
 
 #[derive(Debug)]
@@ -74,7 +82,9 @@ fn build_user(email: String, username: String) -> User {
 
 // Named structs
 
+#[derive(Debug)]
 struct Color(i32, i32, i32);
+#[derive(Debug)]
 struct Point(i32, i32, i32);
 
 fn assign_tuple(i1: i32, i2: i32, i3: i32) -> Color {
